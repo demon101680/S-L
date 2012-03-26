@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>文件（&amp;F）</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="action_O"/>
+    <addaction name="action_C"/>
+    <addaction name="separator"/>
+    <addaction name="action_S"/>
+    <addaction name="action_A"/>
+    <addaction name="separator"/>
+    <addaction name="action_X"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑（&amp;E）</string>
+    </property>
+    <addaction name="action_Z"/>
+    <addaction name="separator"/>
+    <addaction name="action_X_2"/>
+    <addaction name="action_C_2"/>
+    <addaction name="action_V"/>
+    <addaction name="separator"/>
+    <addaction name="action_F"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助（&amp;H）</string>
+    </property>
+    <addaction name="action_5"/>
+   </widget>
+   <addaction name="menu_S"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_N"/>
+   <addaction name="action_S"/>
+   <addaction name="action_X"/>
+   <addaction name="separator"/>
+   <addaction name="action_C_2"/>
+   <addaction name="action_X_2"/>
+   <addaction name="action_V"/>
+   <addaction name="separator"/>
+   <addaction name="action_F"/>
+   <addaction name="action_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_N">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/document.png</normaloff>:/File/images/document.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建（&amp;N）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/document.png</normaloff>:/File/images/document.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开（&amp;O）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/qe29.png</normaloff>:/File/images/qe29.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭（&amp;C）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/qe22.png</normaloff>:/File/images/qe22.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存（&amp;S）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/qe22.png</normaloff>:/File/images/qe22.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为（&amp;A）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/man.png</normaloff>:/File/images/man.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出（&amp;X）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_Z">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/qe19.png</normaloff>:/File/images/qe19.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销（&amp;Z）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_X_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/png-0031.png</normaloff>:/File/images/png-0031.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切（&amp;X）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_C_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/png-0254.png</normaloff>:/File/images/png-0254.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制（&amp;C）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_V">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/png-0259.png</normaloff>:/File/images/png-0259.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴（&amp;V）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_F">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/qe23.png</normaloff>:/File/images/qe23.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找（&amp;F）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/services.png</normaloff>:/File/images/services.png</iconset>
+   </property>
+   <property name="text">
+    <string>版本说明</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="menu.qrc"/>
+ </resources>
+ <connections/>
+</ui>

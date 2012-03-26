@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/File">
+        <file>images/20120321031754891_easyicon_cn_32.png</file>
+        <file>images/close.png</file>
+        <file>images/document.png</file>
+        <file>images/man.png</file>
+        <file>images/png-0031.png</file>
+        <file>images/png-0254.png</file>
+        <file>images/png-0259.png</file>
+        <file>images/qe19.png</file>
+        <file>images/qe22.png</file>
+        <file>images/qe23.png</file>
+        <file>images/qe26.png</file>
+        <file>images/qe29.png</file>
+        <file>images/services.png</file>
+    </qresource>
+</RCC>
