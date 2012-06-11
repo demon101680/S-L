@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'processmanage.ui'
 **
-** Created: Tue Apr 24 20:35:00 2012
-**      by: Qt User Interface Compiler version 4.7.4
+** Created: Mon Jun 11 18:04:38 2012
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -20,12 +20,14 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
+#include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QScrollArea>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableWidget>
 #include <QtGui/QToolBar>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -61,6 +63,14 @@ public:
     QLabel *label_10;
     QLabel *label_11;
     QLabel *label_12;
+    QProgressBar *progressBar;
+    QProgressBar *progressBar_2;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label_13;
+    QLabel *label_14;
     QWidget *tab_3;
     QScrollArea *scrollArea_2;
     QWidget *scrollAreaWidgetContents_2;
@@ -191,6 +201,36 @@ public:
         label_12 = new QLabel(tab_2);
         label_12->setObjectName(QString::fromUtf8("label_12"));
         label_12->setGeometry(QRect(130, 240, 161, 17));
+        progressBar = new QProgressBar(tab_2);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setGeometry(QRect(230, 80, 118, 23));
+        progressBar->setValue(24);
+        progressBar_2 = new QProgressBar(tab_2);
+        progressBar_2->setObjectName(QString::fromUtf8("progressBar_2"));
+        progressBar_2->setGeometry(QRect(230, 120, 118, 23));
+        progressBar_2->setValue(24);
+        verticalLayoutWidget = new QWidget(tab_2);
+        verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(359, 160, 171, 121));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayoutWidget_2 = new QWidget(tab_2);
+        verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
+        verticalLayoutWidget_2->setGeometry(QRect(360, 0, 171, 131));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_13 = new QLabel(tab_2);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(390, 140, 121, 20));
+        label_14 = new QLabel(tab_2);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setGeometry(QRect(400, 280, 111, 20));
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QString::fromUtf8("tab_3"));
@@ -299,6 +339,8 @@ public:
         label_10->setText(QApplication::translate("ProcessManage", "TextLabel", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("ProcessManage", "TextLabel", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("ProcessManage", "TextLabel", 0, QApplication::UnicodeUTF8));
+        label_13->setText(QApplication::translate("ProcessManage", "\345\206\205\345\255\230\344\275\277\347\224\250\346\233\262\347\272\277", 0, QApplication::UnicodeUTF8));
+        label_14->setText(QApplication::translate("ProcessManage", "cpu\344\275\277\347\224\250\346\233\262\347\272\277", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ProcessManage", "\347\263\273\347\273\237\346\200\247\350\203\275", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem5 = tableWidget_2->horizontalHeaderItem(0);
         ___qtablewidgetitem5->setText(QApplication::translate("ProcessManage", "\347\224\250\346\210\267", 0, QApplication::UnicodeUTF8));

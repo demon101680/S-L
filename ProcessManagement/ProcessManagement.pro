@@ -11,8 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        processmanage.cpp
+        processmanage.cpp \
+    widget.cpp
 
-HEADERS  += processmanage.h
+HEADERS  += processmanage.h \
+    widget.h
 
 FORMS    += processmanage.ui

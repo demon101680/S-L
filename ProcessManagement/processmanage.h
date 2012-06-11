@@ -2,7 +2,7 @@
 #define PROCESSMANAGE_H
 
 #include <QMainWindow>
-
+#include <widget.h>
 namespace Ui {
     class ProcessManage;
 }
@@ -19,9 +19,13 @@ public slots:
         void timer_update_TabInfo();
 
 
+
+
 private:
     Ui::ProcessManage *ui;
     QTimer *timer;
+    Widget *x;
+    Widget *y;
 };
 
 #endif // PROCESSMANAGE_H

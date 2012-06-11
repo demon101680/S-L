@@ -10,8 +10,18 @@
 #include "stdio.h"
 #include <QList>
 #include <QDir>
+#include <QPainter>
+#include <QBrush>
+#include <QColor>
+#include <QRect>
+#include <iostream>
+#include <widget.h>
+
+using namespace std;
+
 using namespace std;
 int a0 = 0, a1 = 0, b0 = 0, b1 = 0;
+
 ProcessManage::ProcessManage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ProcessManage)
@@ -22,6 +32,14 @@ ProcessManage::ProcessManage(QWidget *parent) :
 
     ui->setupUi(this);
     timer->start(1000);
+    x = new Widget(this);
+    y = new Widget(this);
+    ui->verticalLayout_2->addWidget(y);
+    ui->verticalLayout->addWidget(x);
+x->i=0;
+y->i=0;
+    //x->repaint();
+
 
 }
 
@@ -33,9 +51,19 @@ ProcessManage::~ProcessManage()
 void ProcessManage::timer_update_TabInfo()
 {
 
+       // x->shownumold=x->shownum;
+
 getcpu();
+
+//cout<<x->shownumold<<"dsfsdf"<<x->shownum<<endl;
+
+x->repaint();
+y->repaint();
 }
+
+
 void ProcessManage::getcpu(){
+
    QString tempStr;
    QFile tempFile;
    int pos;
@@ -74,6 +102,8 @@ void ProcessManage::getcpu(){
     memUsed=QString::number(nMemUsed);
     memUsed+="   G";
     ui->label_8->setText(memUsed);
+    ui->progressBar->setValue(nMemUsed/nMemTotal*100);
+    this->y->buffer[this->y->i]=nMemUsed/nMemTotal*100;
     tempFile.close();
     tempFile.setFileName("/proc/stat");
     if ( !tempFile.open(QIODevice::ReadOnly) )
@@ -114,7 +144,17 @@ void ProcessManage::getcpu(){
     //cout<<(n-m)*100/n<<endl;
     tempFile.close();
     QString CpuUsed;
+    //shownum=(n-m)*100/n;
+    this->x->doAppend((n-m)*100/n);
+//this->x->shownum=(n-m)*100/n;
+this->x->buffer[this->x->i]=(n-m)*100/n;
+//cout<<(n-m)*100/n<<endl;
+//cout<<this->x->i<<endl;
+    cout<<this->x->buffer[this->x->i]<<"i"<<this->x->i<<endl;
+    //cout<<"shownum"<<this->x->shownum<<endl;
+
     CpuUsed=QString::number((n-m)*100/n);
+    ui->progressBar_2->setValue((n-m)*100/n);
     //cout<<a<<"               "<<b<<endl;
     CpuUsed+="%";
     ui->label_9->setText(CpuUsed);
@@ -135,8 +175,10 @@ if ( !tempFile.open(QIODevice::ReadOnly) )
     OpenTime+=QString::number(time/60-(time/3600)*60);
     OpenTime+="min";
     OpenTime+=QString::number(time-(time/60)*60);
+
     OpenTime+="sec";
     ui->label_10->setText(OpenTime);
+      tempFile.close();
     QDir qd("/proc");
     QStringList qsList = qd.entryList();
     QString qs = qsList.join("\n");
@@ -157,7 +199,7 @@ if ( !tempFile.open(QIODevice::ReadOnly) )
         id_of_pro=qs.mid(x+1, y-x-1);
 
         if(!id_of_pro.toInt())
-        {
+       {
             break;
         }
         tempFile.setFileName("/proc/" + id_of_pro + "/status");
@@ -178,11 +220,26 @@ if ( !tempFile.open(QIODevice::ReadOnly) )
         }
 
 
+
 }
+        tempFile.close();
     }//cout<<totalProNum-1<<endl;
 //cout<<thread<<endl;
     qs=QString::number(totalProNum-1);
     ui->label_11->setText(qs);
     ThreadNum=QString::number(thread);
     ui->label_12->setText(ThreadNum);
+    if(this->x->i<100){
+        this->x->i++;}
+    else{
+        this->x->i=0;
+    }   cout<<this->x->i<<endl;
+    if(this->y->i<100){
+        this->y->i++;}
+    else{
+        this->y->i=0;
+    }   cout<<this->y->i<<endl;
+
+
 }
+
