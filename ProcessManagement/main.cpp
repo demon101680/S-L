@@ -1,15 +1,13 @@
 #include <QtGui/QApplication>
+#include <QtGui/QDialog>
+#include<QtCore/QTextCodec>
 #include "processmanage.h"
-#include <QSplashScreen>
-#include <QTimer>
+
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-
+    QApplication app(argc, argv);
+    QTextCodec::setCodecForTr(QTextCodec::codecForName("gb2312"));
     ProcessManage w;
     w.show();
-w.getcpu();
-
-
-    return a.exec();
+    return app.exec();
 }

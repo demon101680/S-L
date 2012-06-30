@@ -45,7 +45,7 @@ painter.setWindow(-2,-2,110,110);
     //cout<<i<<"i"<<endl;
 for(int m=1;m<i;m++){
     if(buffer[m]<100)
-cout<<"buffer:"<<buffer[m]<<endl;
+//cout<<"buffer:"<<buffer[m]<<endl;
     painter.drawLine(m+2,98-buffer[m-1],m+3,98-buffer[m]);
 }
 

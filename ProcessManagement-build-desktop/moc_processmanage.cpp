@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'processmanage.h'
 **
-** Created: Mon Jun 11 18:01:46 2012
+** Created: Sat Jun 30 19:36:44 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ProcessManage[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -31,14 +31,31 @@ static const uint qt_meta_data_ProcessManage[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      15,   14,   14,   14, 0x0a,
-      24,   14,   14,   14, 0x0a,
+      21,   15,   14,   14, 0x08,
+      38,   15,   14,   14, 0x08,
+      71,   14,   14,   14, 0x08,
+      86,   14,   14,   14, 0x08,
+      93,   14,   14,   14, 0x08,
+     103,   14,   14,   14, 0x08,
+     117,   14,   14,   14, 0x08,
+     130,   14,   14,   14, 0x08,
+     141,   14,   14,   14, 0x08,
+     152,   14,   14,   14, 0x08,
+     162,   14,   14,   14, 0x08,
+     171,   14,   14,   14, 0x08,
+     182,   14,   14,   14, 0x08,
+     191,   14,   14,   14, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ProcessManage[] = {
-    "ProcessManage\0\0getcpu()\0timer_update_TabInfo()\0"
+    "ProcessManage\0\0index\0showTabInfo(int)\0"
+    "on_tabWidget_currentChanged(int)\0"
+    "printProcess()\0Info()\0NewWork()\0"
+    "killProcess()\0refreshPro()\0shutdown()\0"
+    "printNet()\0restart()\0detail()\0shuoming()\0"
+    "getcpu()\0timer_update_TabInfo()\0"
 };
 
 void ProcessManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,12 +64,23 @@ void ProcessManage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_ASSERT(staticMetaObject.cast(_o));
         ProcessManage *_t = static_cast<ProcessManage *>(_o);
         switch (_id) {
-        case 0: _t->getcpu(); break;
-        case 1: _t->timer_update_TabInfo(); break;
+        case 0: _t->showTabInfo((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->on_tabWidget_currentChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->printProcess(); break;
+        case 3: _t->Info(); break;
+        case 4: _t->NewWork(); break;
+        case 5: _t->killProcess(); break;
+        case 6: _t->refreshPro(); break;
+        case 7: _t->shutdown(); break;
+        case 8: _t->printNet(); break;
+        case 9: _t->restart(); break;
+        case 10: _t->detail(); break;
+        case 11: _t->shuoming(); break;
+        case 12: _t->getcpu(); break;
+        case 13: _t->timer_update_TabInfo(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData ProcessManage::staticMetaObjectExtraData = {
@@ -87,9 +115,9 @@ int ProcessManage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 14;
     }
     return _id;
 }

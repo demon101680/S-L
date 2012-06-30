@@ -2,9 +2,11 @@
 #define PROCESSMANAGE_H
 
 #include <QMainWindow>
+#include <QtGui/QDialog>
 #include <widget.h>
 namespace Ui {
     class ProcessManage;
+    class UseMethod;
 }
 
 class ProcessManage : public QMainWindow
@@ -14,12 +16,22 @@ class ProcessManage : public QMainWindow
 public:
     explicit ProcessManage(QWidget *parent = 0);
     ~ProcessManage();
-public slots:
-        void getcpu();
-        void timer_update_TabInfo();
 
-
-
+private slots:
+    void showTabInfo(int index);
+    void on_tabWidget_currentChanged(int index);
+    void printProcess();
+    void Info();
+    void NewWork();
+    void killProcess();
+    void refreshPro();
+    void shutdown();
+    void printNet();
+    void restart();
+    void detail();
+    void shuoming();
+    void getcpu();
+    void timer_update_TabInfo();
 
 private:
     Ui::ProcessManage *ui;
@@ -28,4 +40,4 @@ private:
     Widget *y;
 };
 
-#endif // PROCESSMANAGE_H
+#endif
